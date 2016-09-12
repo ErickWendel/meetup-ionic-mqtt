@@ -25,6 +25,7 @@ angular.module('starter', ['ionic', 'chart.js'])
   .controller("LineCtrl", function ($interval) {
     var vm = this;
     vm.labels = [''];
+    vm.ledAceso = true;
     vm.series = ['Temperatura', 'Distancia'];
     vm.data = [
       [], 
@@ -46,7 +47,7 @@ angular.module('starter', ['ionic', 'chart.js'])
         vm.data[1] = vm.data[1].slice(2);
         vm.labels = vm.labels.slice(4);
       }
-    }, 10);
+    }, 900);
 
     vm.options = {
       animation: {
